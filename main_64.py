@@ -65,7 +65,7 @@ def read_friend_info(entry, max_counter=1):
 if __name__ == '__main__':
     pm = pymem.Pymem("WeChat.exe")
     module_name = 'WeChatWin.dll'
-    txl_addr_bast = 0x3A6F8C8  # "7e 48 a1 ?? ?? ?? ?? 85 c0 75 ?? 68 ?? ?? ?? ?? e8,3"   --- Version：3.9.2.23
+    txl_addr_bast = 0x3A6F8C8  # "48 89 05 ?? ?? ?? ?? 4c 8d 85 ?? ?? ?? ?? 48 8b d6 48 8b c8 e8 ?? ?? ?? ?? 84 c0 74 ?? 48 8d 95,3"    --- Version：3.9.5.81
     txl_entry_offset = 0xd8
     txl_size_offset = 0xd0
     module_addr = pymem.process.module_from_name(pm.process_handle, module_name).lpBaseOfDll
